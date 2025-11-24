@@ -1,0 +1,491 @@
+/* Custom CSS Variables */
+:root {
+    --orange-primary: #ea580c;
+    --orange-secondary: #f97316;
+    --orange-light: #fed7aa;
+    --orange-bg: #fff7ed;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(to right, var(--orange-primary), var(--orange-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Orange Theme Colors */
+.text-orange {
+    color: var(--orange-primary) !important;
+}
+
+.bg-orange {
+    background: linear-gradient(135deg, var(--orange-secondary), var(--orange-primary)) !important;
+}
+
+.bg-orange-light {
+    background-color: var(--orange-bg) !important;
+}
+
+.btn-orange {
+    background: linear-gradient(135deg, var(--orange-secondary), var(--orange-primary));
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+    background: linear-gradient(135deg, var(--orange-primary), #dc2626);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3);
+}
+
+.btn-outline-orange {
+    border: 2px solid var(--orange-primary);
+    color: var(--orange-primary);
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-orange:hover {
+    background: var(--orange-primary);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Navbar */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar .nav-link {
+    color: #374151;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar .nav-link:hover {
+    color: var(--orange-primary);
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--orange-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar .nav-link:hover::after {
+    width: 80%;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(234, 88, 12, 0.3) 100%);
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control.prev {
+    left: 20px;
+}
+
+.carousel-control.next {
+    right: 20px;
+}
+
+.carousel-control i {
+    font-size: 24px;
+    color: var(--orange-primary);
+}
+
+.carousel-indicators-custom {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel-indicators-custom button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators-custom button.active {
+    width: 32px;
+    border-radius: 6px;
+    background: var(--orange-primary);
+}
+
+/* Hover Effects */
+.hover-zoom {
+    transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
+.hover-card {
+    transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Icon Boxes */
+.icon-box {
+    background: linear-gradient(135deg, var(--orange-secondary), var(--orange-primary));
+    box-shadow: 0 4px 6px rgba(234, 88, 12, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.icon-box-large {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--orange-secondary), var(--orange-primary));
+    box-shadow: 0 4px 6px rgba(234, 88, 12, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hover-card:hover .icon-box,
+.hover-card:hover .icon-box-large {
+    transform: scale(1.1);
+}
+
+/* Services Carousel */
+.services-carousel {
+    transition: transform 0.5s ease;
+    gap: 15px;
+}
+
+.service-slide {
+    flex: 0 0 calc(33.333% - 10px);
+    min-width: calc(33.333% - 10px);
+}
+
+.service-slide img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.carousel-control-service {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-service:hover {
+    background: var(--orange-primary);
+    color: white;
+}
+
+.carousel-control-service:hover i {
+    color: white;
+}
+
+.carousel-control-service.prev {
+    left: -25px;
+}
+
+.carousel-control-service.next {
+    right: -25px;
+}
+
+.carousel-control-service i {
+    font-size: 24px;
+    color: var(--orange-primary);
+    transition: color 0.3s ease;
+}
+
+/* Floating Action Buttons */
+.whatsapp-float,
+.call-float {
+    position: fixed;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float {
+    bottom: 30px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+.call-float {
+    bottom: 100px;
+    background: linear-gradient(135deg, var(--orange-secondary), var(--orange-primary));
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4);
+}
+
+.whatsapp-float:hover,
+.call-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float:hover {
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.call-float:hover {
+    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.6);
+}
+
+.whatsapp-float i,
+.call-float i {
+    font-size: 32px;
+    color: white;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .service-slide {
+        flex: 0 0 calc(50% - 10px);
+        min-width: calc(50% - 10px);
+    }
+    
+    .carousel-control-service.prev {
+        left: -15px;
+    }
+    
+    .carousel-control-service.next {
+        right: -15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 100vh;
+        padding: 60px 0;
+    }
+    
+    .display-2 {
+        font-size: 2.5rem;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .service-slide {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+    
+    /* Hide carousel controls on mobile */
+    .carousel-control {
+        display: none;
+    }
+    
+    /* Packages section mobile fix */
+    #packages .col-lg-4,
+    #packages .col-md-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    
+    #packages .card {
+        margin-bottom: 1rem;
+    }
+    
+    #packages .card-title {
+        font-size: 1.5rem;
+    }
+    
+    #packages .card-body {
+        padding: 1.5rem !important;
+    }
+    
+    .whatsapp-float,
+    .call-float {
+        width: 50px;
+        height: 50px;
+        right: 20px;
+    }
+    
+    .whatsapp-float {
+        bottom: 20px;
+    }
+    
+    .call-float {
+        bottom: 80px;
+    }
+    
+    .whatsapp-float i,
+    .call-float i {
+        font-size: 26px;
+    }
+}
+
+/* Card Styles */
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+/* Section Spacing */
+section {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Ensure packages section is visible */
+#packages {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#packages .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#packages .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+
+/* Smooth Transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+footer a:hover {
+    color: var(--orange-primary) !important;
+}
+
+/* Utilities */
+.shadow-lg {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.rounded-4 {
+    border-radius: 1.5rem !important;
+}
