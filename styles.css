@@ -386,13 +386,6 @@ html {
     }
     
     /* Packages section mobile fix */
-    #packages .col-lg-4,
-    #packages .col-md-6 {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
-    }
-    
     #packages .card {
         margin-bottom: 1rem;
     }
@@ -451,20 +444,6 @@ section {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-}
-
-#packages .container {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-#packages .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
 }
 
 /* Smooth Transitions */
