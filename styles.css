@@ -313,8 +313,14 @@ html {
 
 .call-float {
     bottom: 100px;
-    background: linear-gradient(135deg, var(--orange-secondary), var(--orange-primary));
-    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4);
+    /* background: linear-gradient(135deg, var(--orange-secondary), var(--orange-primary)); */
+    background: linear-gradient(
+  135deg,
+  rgba(4, 158, 61, 0.888),
+  rgb(1, 119, 19)
+);
+    /* box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4); */
+    box-shadow: 0 4px 12px rgb(63, 237, 5);
 }
 
 .whatsapp-float:hover,
@@ -327,7 +333,8 @@ html {
 }
 
 .call-float:hover {
-    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.6);
+    /* box-shadow: 0 6px 20px rgba(249, 249, 249, 0.6); */
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
 }
 
 .whatsapp-float i,
