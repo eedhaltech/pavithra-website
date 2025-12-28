@@ -314,10 +314,10 @@ html {
 .call-float {
     bottom: 100px;
     /* background: linear-gradient(135deg, var(--orange-secondary), var(--orange-primary)); */
-    background: linear-gradient(
+background: linear-gradient(
   135deg,
-  rgba(4, 158, 61, 0.888),
-  rgb(1, 119, 19)
+  #1180FF, /* Truecaller Azure blue */
+  #2589FF  /* Dodger-style blue */
 );
     /* box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4); */
     box-shadow: 0 4px 12px rgb(63, 237, 5);
